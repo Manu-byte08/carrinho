@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="App.js" defer></script>
+</head>
+<body>
+    <header>
+        <span>Carrinho de compras da <b>manu</b></span>
+    </header>
+    <main>
+        <div class="page-title">Seu Carrinho</div>
+        <div class="content">
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>-</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="https://picsum.photos/100/120" alt="" />
+                                    <div class="info">
+                                        <div class="name">Nome do produto</div>
+                                        <div class="category">Categoria</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 250</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 500</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="https://picsum.photos/100/120" alt="" />
+                                    <div class="info">
+                                        <div class="name">Nome do produto</div>
+                                        <div class="category">Categoria</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 250</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 500</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="https://picsum.photos/100/120" alt="" />
+                                    <div class="info">
+                                        <div class="name">Nome do produto</div>
+                                        <div class="category">Categoria</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 120</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 240</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="https://picsum.photos/100/120" alt="" />
+                                    <div class="info">
+                                        <div class="name">Nome do produto</div>
+                                        <div class="category">Categoria</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 209</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 418</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="https://picsum.photos/100/120" alt="" />
+                                    <div class="info">
+                                        <div class="name">Nome do produto</div>
+                                        <div class="category">Categoria</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 150</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 300</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <aside>
+                <div class="box">
+                    <header>Resumo da compra</header>
+                    <div class="info">
+                        <div><span>Sub-total</span><span>R$ <span id="subtotal">500</span></span></div>
+                        <div><span>Frete</span><span>Gratuito</span></div>
+                    </div>
+                    <footer>
+                        <span>Total</span>
+                        <span>R$ <span id="total">500</span></span>
+                    </footer>
+                </div>
+                <button id="checkoutButton">Finalizar Compra</button>
+
+                <!-- Formulário de informações do cliente -->
+                <div id="customerInfo" style="display: none;">
+                    <h3>Informações do Cliente</h3>
+                    <input type="text" id="customerName" placeholder="Nome Completo" required />
+                    <input type="email" id="customerEmail" placeholder="Email" required />
+                    <input type="text" id="customerPhone" placeholder="Telefone" required />
+                </div>
+
+                <!-- Formulário de pagamento -->
+                <div id="paymentOptions" style="display: none;">
+                    <h3>Escolha a forma de pagamento</h3>
+                    <select id="paymentMethod">
+                        <option value="pix">PIX</option>
+                        <option value="card">Cartão de Crédito</option>
+                        <option value="boleto">Boleto</option>
+                    </select>
+
+                    <div id="cardInfo" style="display: none;">
+                        <h4>Informações do Cartão</h4>
+                        <input type="text" id="cardNumber" placeholder="Número do Cartão" />
+                        <input type="text" id="cardExpiry" placeholder="MM/AA" />
+                        <input type="text" id="cardCVC" placeholder="CVC" />
+                    </div>
+
+                    <div id="boletoInfo" style="display: none;">
+                        <h4>Boleto</h4>
+                        <p>O boleto será enviado para o seu e-mail.</p>
+                    </div>
+
+                    <button id="generatePix">Gerar Código PIX</button>
+                    <button id="submitOrder">Enviar Pedido</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Div para exibir o QR Code -->
+    <div id="qrcode"></div>
+</body>
+</html>
